@@ -447,16 +447,21 @@ body::before {
   display: block;
   background: #000;
   overflow: hidden;
-}
-.yt-facade img {
   width: 100%;
-  display: block;
+}
+/* Portrait 9:16 — padding-bottom drives the height reliably */
+.yt-facade.portrait { padding-bottom: 177.78%; }
+/* Landscape 16:9 */
+.yt-facade.landscape { padding-bottom: 56.25%; }
+.yt-facade img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
-  opacity: 0.82;
+  display: block;
+  opacity: 0.85;
   transition: opacity 0.3s ease;
 }
-.yt-facade img.ratio-portrait  { aspect-ratio: 9/16; }
-.yt-facade img.ratio-landscape { aspect-ratio: 16/9; }
 .yt-facade:hover img { opacity: 0.65; }
 .yt-play-btn {
   position: absolute;
@@ -1466,11 +1471,8 @@ body::before {
       <div class="vfc vfc-tr"></div>
       <div class="vfc vfc-bl"></div>
       <div class="vfc vfc-br"></div>
-      <div class="yt-facade" data-videoid="Ep0otX_RokM" data-ratio="9/16">
-        <img
-          class="ratio-portrait"
-          src="pauta-thumb.jpg"
-          alt="PAUTA Final — PG Productions">
+      <div class="yt-facade portrait" data-videoid="Ep0otX_RokM" data-ratio="9/16">
+        <img src="pauta-thumb.jpg" alt="PAUTA Final — PG Productions">
         <button class="yt-play-btn" aria-label="Play video">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <polygon points="5,3 19,12 5,21"/>
@@ -1678,12 +1680,10 @@ body::before {
       <div class="video-frame-corner vfc-tr"></div>
       <div class="video-frame-corner vfc-bl"></div>
       <div class="video-frame-corner vfc-br"></div>
-      <div class="yt-facade" data-videoid="4y4svjJgUGk" data-ratio="16/9">
+      <div class="yt-facade landscape" data-videoid="4y4svjJgUGk" data-ratio="16/9">
         <img
-          class="ratio-landscape"
           src="https://img.youtube.com/vi/4y4svjJgUGk/maxresdefault.jpg"
-          alt="PG Productions — See How We Do It"
-          loading="lazy">
+          alt="PG Productions — See How We Do It">
         <button class="yt-play-btn" aria-label="Play video">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <polygon points="5,3 19,12 5,21"/>
