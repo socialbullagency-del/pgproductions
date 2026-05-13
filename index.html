@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PG Productions — Content Strategy & Digital Marketing in Tampa, FL</title>
+<meta name="description" content="PG Productions helps Tampa entrepreneurs turn content into paying customers. Expert content strategy, marketing strategy, and audiovisual production that sells. Book a free consultation today." />
+<meta name="keywords" content="content strategy Tampa, digital marketing Tampa, marketing strategist Tampa, content creation Tampa, PG Productions, PG Ecosystem" />
+<link rel="canonical" href="https://pgproductions.vip/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="PG Productions — Communication & Marketing Strategists" />
+<meta property="og:description" content="Stop getting views. Start getting customers. Tampa's premier communication and marketing strategists." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pgproductions.vip/" />
+
+<!-- Fonts: Oswald (display) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+
+<!-- Schema: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MarketingAgency",
+  "name": "PG Productions",
+  "url": "https://pgproductions.vip",
+  "description": "Communication and Marketing Strategists helping Tampa entrepreneurs convert views and likes into paying customers.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Tampa", "addressRegion": "FL", "addressCountry": "US" },
+  "areaServed": "Tampa, Florida",
+  "serviceType": ["Content Strategy", "Marketing Strategy", "Audiovisual Content Creation"],
+  "priceRange": "$$"
+}
+</script>
+
+<style>
+/* ============================================================
+   PG PRODUCTIONS — Design System
+   Palette: Black #000 | Gold #C9A84C | White #FFF
+   Display: Oswald | Accent: Cormorant Garamond | Body: Inter
+   ============================================================ */
+
+:root {
+  --black:         #000000;
+  --black2:        #080808;
+  --black3:        #101010;
+  --card:          #111111;
+  --card2:         #181818;
+  --gold:          #C9A84C;
+  --gold-light:    #E8D5A3;
+  --gold-shine:    #F5E6B8;
+  --gold-dark:     #A67C00;
+  --gold-glow:     rgba(201,168,76,0.15);
+  --gold-border:   rgba(201,168,76,0.2);
+  --gold-border-h: rgba(201,168,76,0.55);
+  --white:         #FFFFFF;
+  --off-white:     #F0EDE8;
+  --gray:          #888888;
+  --gray2:         #444444;
+  --border:        rgba(255,255,255,0.06);
+
+  --ff-display:    'Oswald', sans-serif;
+  --ff-serif:      'Cormorant Garamond', Georgia, serif;
+  --ff-body:       'Inter', -apple-system, sans-serif;
+
+  --container:     1280px;
+  --radius:        8px;
+  --radius-lg:     16px;
+  --t:             0.45s cubic-bezier(0.25,0.46,0.45,0.94);
+  --t-fast:        0.22s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--ff-body);
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input, textarea, select { font-family: inherit; }
+
+/* ── Noise overlay ──────────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* ── Container ──────────────────────────────────────────── */
+.wrap { max-width: var(--container); margin: 0 auto; padding: 0 40px; }
+@media (max-width: 768px) { .wrap { padding: 0 20px; } }
+
+/* ── Scroll reveal ──────────────────────────────────────── */
+.rv { opacity: 0; transform: translateY(36px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.rv.vis { opacity: 1; transform: translateY(0); }
+.rv-d1 { transition-delay: 0.1s; }
+.rv-d2 { transition-delay: 0.2s; }
+.rv-d3 { transition-delay: 0.3s; }
+.rv-d4 { transition-delay: 0.4s; }
+.rv-d5 { transition-delay: 0.5s; }
+
+/* ── Gold line ──────────────────────────────────────────── */
+.gold-line {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto;
+}
+.gold-line.left { margin: 0; }
+
+/* ── Section label ──────────────────────────────────────── */
+.section-label {
+  font-family: var(--ff-display);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* ── Buttons ────────────────────────────────────────────── */
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--gold);
+  color: var(--black);
+  font-family: var(--ff-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border: none;
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+  position: relative;
+  overflow: hidden;
+}
+.btn-gold::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.55s ease;
+}
+.btn-gold:hover::after { transform: translateX(100%); }
+.btn-gold:hover {
+  background: var(--gold-light);
+  box-shadow: 0 8px 40px rgba(201,168,76,0.35);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--ff-display);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  border: 1px solid var(--gold-border);
+  cursor: pointer;
+  transition: border-color var(--t-fast), color var(--t-fast), background var(--t-fast);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+  color: var(--gold-light);
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 22px 0;
+  transition: background var(--t), padding var(--t), border-color var(--t);
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: var(--gold-border);
+  padding: 14px 0;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo img {
+  height: 42px; width: auto;
+  filter: brightness(1);
+  transition: filter var(--t-fast);
+}
+.nav-logo:hover img { filter: brightness(1.15); }
+
+.nav-links {
+  display: flex; align-items: center; gap: 40px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--ff-display);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  transition: color var(--t-fast);
+}
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta { display: flex; align-items: center; }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px; height: 1.5px;
+  background: var(--white);
+  transition: var(--t-fast);
+}
+
+@media (max-width: 900px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+}
+
+/* ============================================================
+   SCROLL SCRUB — Video plays frame-by-frame on scroll
+   ============================================================ */
+.scrub-section {
+  height: 500vh; /* taller = more scroll room = slower relative seeking = smoother */
+  position: relative;
+}
+.scrub-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+  padding: 120px 80px 80px;
+}
+.scrub-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+.scrub-video-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.scrub-video {
+  width: 88%;
+  height: auto;
+  max-height: 62vh;
+  object-fit: contain;
+  display: block;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.scrub-eyebrow {
+  font-family: var(--ff-display);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: var(--gold-shine); margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 1s ease 0.4s forwards;
+}
+.scrub-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.6rem, 5.5vw, 5.5rem);
+  font-weight: 700; line-height: 0.95;
+  text-transform: uppercase; color: var(--white);
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 1s ease 0.65s forwards;
+}
+.scrub-title span {
+  display: block;
+  font-family: var(--ff-serif);
+  font-weight: 600; font-style: italic;
+  font-size: 0.62em; letter-spacing: 0.04em;
+  color: var(--gold-shine); text-transform: none;
+  margin-bottom: 10px;
+}
+.scrub-progress-wrap {
+  width: 180px; height: 1px;
+  background: rgba(255,255,255,0.12);
+  position: relative; margin-bottom: 18px;
+  opacity: 0;
+  animation: fadeIn 1s ease 1s forwards;
+}
+.scrub-bar {
+  position: absolute; top: 0; left: 0;
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-shine));
+  /* No CSS transition — JS updates this directly each rAF for zero lag */
+}
+.scrub-hint {
+  font-family: var(--ff-display);
+  font-size: 9px; letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  opacity: 0;
+  animation: fadeIn 1s ease 1.1s forwards;
+  transition: opacity 0.4s ease;
+}
+.scrub-scroll-arrow {
+  margin-top: 14px;
+  opacity: 0;
+  animation: fadeIn 1s ease 1.2s forwards, scrubBounce 2s ease 2.2s infinite;
+}
+.scrub-scroll-arrow svg { stroke: var(--gold); opacity: 0.55; }
+@keyframes scrubBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(7px); }
+}
+
+/* ============================================================
+   HERO — Two-column split: text left, video right
+   ============================================================ */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+  padding: 130px 80px 80px;
+  background: var(--black);
+  position: relative;
+}
+
+/* Left column */
+.hero-left {
+  position: relative; z-index: 2;
+}
+
+.hero-eyebrow {
+  font-family: var(--ff-display);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.3s forwards;
+}
+
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.5s forwards;
+}
+
+.hero-title span {
+  display: block;
+  color: var(--gold);
+  font-weight: 200;
+  font-size: 0.65em;
+  letter-spacing: 0.04em;
+  font-style: italic;
+  font-family: var(--ff-serif);
+  text-transform: none;
+  margin-bottom: 6px;
+}
+
+.hero-sub {
+  font-family: var(--ff-body);
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+  max-width: 480px;
+  margin: 28px 0 44px;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.7s forwards;
+}
+
+.hero-cta {
+  display: flex; align-items: center; justify-content: flex-start; gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.9s forwards;
+}
+
+/* Right column: interactive video player */
+.hero-video-col {
+  position: relative; z-index: 2;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.55s forwards;
+}
+.hero-player-wrap {
+  position: relative;
+  border: 1px solid var(--gold-border);
+  background: var(--card);
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.08);
+}
+.hero-player-wrap video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.hero-player-wrap .vfc {
+  position: absolute; width: 28px; height: 28px;
+  border-color: var(--gold); border-style: solid;
+  pointer-events: none; z-index: 1;
+}
+.hero-player-wrap .vfc-tl { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.hero-player-wrap .vfc-tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.hero-player-wrap .vfc-bl { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+.hero-player-wrap .vfc-br { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  opacity: 0;
+  animation: fadeIn 1s ease 1.4s forwards;
+}
+
+/* Hero mobile */
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 110px 28px 70px;
+    gap: 44px;
+  }
+  .hero-left { text-align: center; }
+  .hero-sub { margin: 28px auto 44px; max-width: 100%; }
+  .hero-cta { justify-content: center; }
+  .hero-video-col { order: -1; }
+  .scrub-sticky {
+    grid-template-columns: 1fr;
+    padding: 100px 28px 60px;
+    gap: 32px;
+  }
+  .scrub-overlay { align-items: center; text-align: center; }
+  .scrub-video-col { order: -1; }
+  .scrub-title { font-size: clamp(2.2rem, 9vw, 3.8rem); }
+}
+.scroll-indicator span {
+  font-family: var(--ff-display);
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.scroll-line {
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2s ease infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+  50% { opacity: 0.3; }
+}
+
+/* ============================================================
+   TICKER
+   ============================================================ */
+.ticker {
+  background: var(--gold);
+  padding: 12px 0;
+  overflow: hidden;
+  position: relative;
+}
+.ticker-track {
+  display: flex; white-space: nowrap;
+  animation: tick 28s linear infinite;
+}
+.ticker-item {
+  font-family: var(--ff-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--black);
+  padding: 0 40px;
+}
+.ticker-dot { color: rgba(0,0,0,0.4); margin-right: 40px; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ============================================================
+   PROBLEM SECTION
+   ============================================================ */
+.problem {
+  padding: 120px 0;
+  background: var(--black2);
+  position: relative;
+  overflow: hidden;
+}
+.problem::before {
+  content: '';
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 1px; height: 80px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+.problem-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+.problem-left { }
+.problem-tag {
+  font-family: var(--ff-display);
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.problem-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+.problem-title em {
+  font-style: italic;
+  font-family: var(--ff-serif);
+  font-weight: 300;
+  color: var(--gold);
+  text-transform: none;
+  font-size: 1.1em;
+}
+.problem-body {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.85;
+  margin-bottom: 40px;
+}
+.problem-stats {
+  display: flex; gap: 48px;
+}
+.stat-item { }
+.stat-num {
+  font-family: var(--ff-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--gray);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.problem-right {
+  position: relative;
+}
+.problem-quote {
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  padding: 48px 44px;
+  position: relative;
+}
+.problem-quote::before {
+  content: '"';
+  position: absolute; top: -30px; left: 32px;
+  font-family: var(--ff-serif);
+  font-size: 120px;
+  color: var(--gold);
+  opacity: 0.25;
+  line-height: 1;
+}
+.problem-quote p {
+  font-family: var(--ff-serif);
+  font-size: 1.45rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--off-white);
+  margin-bottom: 24px;
+}
+.problem-quote-author {
+  display: flex; align-items: center; gap: 14px;
+}
+.author-line {
+  width: 32px; height: 1px;
+  background: var(--gold);
+}
+.author-name {
+  font-family: var(--ff-display);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .problem-inner { grid-template-columns: 1fr; gap: 60px; }
+  .problem-stats { gap: 32px; }
+}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services {
+  padding: 130px 0;
+  background: var(--black3);
+  position: relative;
+}
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.services-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 16px 0 20px;
+}
+.services-sub {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 300;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.service-card {
+  background: var(--card);
+  padding: 56px 44px;
+  border: 1px solid transparent;
+  position: relative;
+  transition: border-color var(--t), background var(--t), transform var(--t);
+  overflow: hidden;
+  cursor: default;
+}
+.service-card::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform var(--t);
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover {
+  background: var(--card2);
+  border-color: var(--gold-border);
+  transform: translateY(-4px);
+}
+
+.service-num {
+  font-family: var(--ff-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(201,168,76,0.1);
+  line-height: 1;
+  margin-bottom: 32px;
+  transition: color var(--t);
+}
+.service-card:hover .service-num { color: rgba(201,168,76,0.2); }
+
+.service-icon {
+  width: 44px; height: 44px;
+  border: 1px solid var(--gold-border);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+  transition: border-color var(--t), background var(--t);
+}
+.service-card:hover .service-icon {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+.service-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+
+.service-name {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+.service-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; gap: 2px; }
+  .service-card { padding: 44px 32px; }
+}
+
+/* ============================================================
+   ECOSYSTEM
+   ============================================================ */
+.ecosystem {
+  padding: 130px 0;
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+.ecosystem::after {
+  content: 'ECOSYSTEM';
+  position: absolute;
+  right: -40px; top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: var(--ff-display);
+  font-size: 9rem;
+  font-weight: 700;
+  color: rgba(201,168,76,0.03);
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.ecosystem-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.ecosystem-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 16px 0 20px;
+}
+.ecosystem-title em {
+  font-family: var(--ff-serif);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold);
+  text-transform: none;
+  font-size: 1.1em;
+}
+.ecosystem-sub {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.ecosystem-proof {
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  padding: 64px 60px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 64px;
+}
+.ecosystem-proof::before,
+.ecosystem-proof::after {
+  content: '';
+  position: absolute;
+  width: 40px; height: 40px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.ecosystem-proof::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.ecosystem-proof::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.ecosystem-proof-text {
+  font-family: var(--ff-serif);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--off-white);
+  line-height: 1.55;
+  max-width: 800px;
+  margin: 0 auto 32px;
+}
+.ecosystem-proof-text strong {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--gold);
+  font-family: var(--ff-display);
+  font-size: 0.85em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ecosystem-businesses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.eco-tag {
+  font-family: var(--ff-display);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.7);
+  background: rgba(201,168,76,0.07);
+  border: 1px solid rgba(201,168,76,0.15);
+  padding: 8px 18px;
+}
+
+.ecosystem-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.pillar {
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  padding: 44px 32px;
+  text-align: center;
+  transition: background var(--t), border-color var(--t);
+}
+.pillar:hover { background: var(--card2); border-color: rgba(201,168,76,0.4); }
+.pillar-icon {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.pillar-icon svg {
+  width: 32px; height: 32px;
+  stroke: var(--gold); fill: none; stroke-width: 1.5;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.pillar-name {
+  font-family: var(--ff-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.pillar-text {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .ecosystem-pillars { grid-template-columns: repeat(2, 1fr); }
+  .ecosystem-proof { padding: 44px 28px; }
+}
+@media (max-width: 500px) {
+  .ecosystem-pillars { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+.process {
+  padding: 130px 0;
+  background: var(--black2);
+}
+.process-header {
+  margin-bottom: 80px;
+}
+.process-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 16px 0 18px;
+}
+.process-sub {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 300;
+  max-width: 440px;
+  line-height: 1.7;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.step {
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  padding: 48px 36px;
+  position: relative;
+}
+.step-num {
+  font-family: var(--ff-display);
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(201,168,76,0.08);
+  line-height: 1;
+  position: absolute;
+  top: 20px; right: 24px;
+}
+.step-name {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.step-desc {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .process-steps { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   VIDEO DEEP-DIVE
+   ============================================================ */
+.deepdive {
+  padding: 130px 0;
+  background: var(--black3);
+  text-align: center;
+}
+.deepdive-header {
+  margin-bottom: 60px;
+}
+.deepdive-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 16px 0 18px;
+}
+.deepdive-sub {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 300;
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  overflow: hidden;
+}
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.video-frame-corner {
+  position: absolute; width: 30px; height: 30px;
+  border-color: var(--gold); border-style: solid;
+  pointer-events: none;
+}
+.vfc-tl { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.vfc-tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.vfc-bl { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+.vfc-br { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+/* ============================================================
+   FORM / BOOKING
+   ============================================================ */
+.booking {
+  padding: 140px 0;
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+.booking::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.booking-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+.booking-left { }
+.booking-eyebrow {
+  font-family: var(--ff-display);
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.booking-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+.booking-title em {
+  display: block;
+  font-family: var(--ff-serif);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold);
+  text-transform: none;
+  font-size: 1.1em;
+}
+.booking-body {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.85;
+  margin-bottom: 48px;
+}
+.booking-points {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.bp-item {
+  display: flex; align-items: flex-start; gap: 16px;
+}
+.bp-dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.bp-text {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+/* Form */
+.booking-form {
+  background: var(--card);
+  border: 1px solid var(--gold-border);
+  padding: 56px 48px;
+  position: relative;
+}
+.booking-form::before,
+.booking-form::after {
+  content: '';
+  position: absolute;
+  width: 30px; height: 30px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.booking-form::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.booking-form::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.form-title {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.form-subtitle {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color var(--t-fast), background var(--t-fast);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.05);
+}
+.form-group select option { background: var(--card); color: var(--white); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-submit {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 11px;
+  padding: 18px;
+  justify-content: center;
+}
+.form-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--gray2);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .booking-inner { grid-template-columns: 1fr; gap: 60px; }
+  .booking-form { padding: 40px 28px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--black2);
+  border-top: 1px solid var(--gold-border);
+  padding: 64px 0 40px;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+}
+.footer-brand img {
+  height: 38px; margin-bottom: 20px;
+}
+.footer-brand p {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.75;
+  max-width: 300px;
+}
+.footer-col-title {
+  font-family: var(--ff-display);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.footer-links {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.footer-links a {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  transition: color var(--t-fast);
+}
+.footer-links a:hover { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-copy {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--gray2);
+}
+.footer-socials {
+  display: flex; gap: 20px;
+}
+.footer-socials a {
+  font-family: var(--ff-display);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray2);
+  transition: color var(--t-fast);
+}
+.footer-socials a:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ============================================================
+   MOBILE NAV MENU (simple slide)
+   ============================================================ */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 990;
+  background: rgba(0,0,0,0.97);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 36px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.77,0,0.18,1);
+}
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu a {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: color var(--t-fast);
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-close {
+  position: absolute; top: 28px; right: 28px;
+  background: none; border: none; cursor: pointer;
+  font-size: 1.6rem; color: var(--gold);
+  line-height: 1;
+}
+
+/* Form success state */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 48px 24px;
+}
+.form-success.show { display: block; }
+.form-success-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.form-success h3 {
+  font-family: var(--ff-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.form-success p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+</style>
+</head>
+<body>
+
+<!-- ─── MOBILE MENU ────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#ecosystem" onclick="closeMobile()">The Ecosystem</a>
+  <a href="#process" onclick="closeMobile()">Our Process</a>
+  <a href="#booking" onclick="closeMobile()">Book a Call</a>
+</div>
+
+<!-- ─── NAV ───────────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="pglogo.png" alt="PG Productions Logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#ecosystem">The Ecosystem</a></li>
+      <li><a href="#process">Our Process</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#booking" class="btn-gold" style="padding:12px 28px;font-size:10px;">Book a Free Call</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ─── SCROLL SCRUB INTRO ───────────────────────────────── -->
+<div class="scrub-section" id="scrubSection">
+  <div class="scrub-sticky">
+
+    <!-- Left: text -->
+    <div class="scrub-overlay">
+      <p class="scrub-eyebrow">PG Productions · Tampa, Florida</p>
+      <h2 class="scrub-title">
+        <span>Stop getting views.</span>
+        Start Getting<br>Customers.
+      </h2>
+      <div class="scrub-progress-wrap">
+        <div class="scrub-bar" id="scrubBar"></div>
+      </div>
+      <p class="scrub-hint" id="scrubHint">Scroll to reveal</p>
+      <div class="scrub-scroll-arrow">
+        <svg width="18" height="28" viewBox="0 0 18 28" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="9" y1="0" x2="9" y2="20"/>
+          <polyline points="2,13 9,20 16,13"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Right: scroll-scrub video -->
+    <div class="scrub-video-col">
+      <video class="scrub-video" id="scrubVideo" muted playsinline preload="auto">
+        <source src="hero-scroll-smooth.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── HERO ──────────────────────────────────────────────── -->
+<section class="hero" id="home">
+
+  <!-- Left: text + CTAs -->
+  <div class="hero-left">
+    <p class="hero-eyebrow">PG Productions · Tampa, Florida</p>
+    <h1 class="hero-title">
+      <span>Stop getting views.</span>
+      Start Getting<br>Customers.
+    </h1>
+    <p class="hero-sub">
+      Tampa's premier communication and marketing strategists — turning your content, social presence, and brand voice into a predictable revenue machine.
+    </p>
+    <div class="hero-cta">
+      <a href="#booking" class="btn-gold">Book a Free Consultation</a>
+      <a href="#services" class="btn-outline">See What We Do</a>
+    </div>
+  </div>
+
+  <!-- Right: interactive video player (click to play with audio) -->
+  <div class="hero-video-col">
+    <div class="hero-player-wrap">
+      <div class="vfc vfc-tl"></div>
+      <div class="vfc vfc-tr"></div>
+      <div class="vfc vfc-bl"></div>
+      <div class="vfc vfc-br"></div>
+      <video controls preload="metadata">
+        <source src="PAUTA 1 Final.MP4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── TICKER ────────────────────────────────────────────── -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">Content Strategy <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Marketing Strategy <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Audiovisual Production <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">The PG Ecosystem <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Tampa, Florida <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Convert Views Into Revenue <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Content Strategy <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Marketing Strategy <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Audiovisual Production <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">The PG Ecosystem <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Tampa, Florida <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Convert Views Into Revenue <span class="ticker-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- ─── PROBLEM SECTION ───────────────────────────────────── -->
+<section class="problem">
+  <div class="wrap">
+    <div class="problem-inner">
+      <div class="problem-left rv">
+        <p class="problem-tag">The Real Problem</p>
+        <h2 class="problem-title">
+          You're growing<br>an audience.<br>
+          <em>Not a business.</em>
+        </h2>
+        <p class="problem-body">
+          Most Tampa entrepreneurs are posting consistently, building their following, and getting likes — but the revenue isn't following. The problem isn't your effort. It's the strategy behind your communication. Content without a system is just noise.
+        </p>
+        <div class="problem-stats">
+          <div class="stat-item">
+            <div class="stat-num">3×</div>
+            <div class="stat-label">More Revenue<br>from Strategic Content</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">87%</div>
+            <div class="stat-label">of Buyers Research<br>Before They Purchase</div>
+          </div>
+        </div>
+      </div>
+      <div class="problem-right rv rv-d2">
+        <div class="problem-quote">
+          <p>The businesses inside the PG Ecosystem didn't find success by posting more. They found it by communicating with purpose — every piece of content designed to convert.</p>
+          <div class="problem-quote-author">
+            <div class="author-line"></div>
+            <span class="author-name">PG Productions · Tampa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─────────────────────────────────────────── -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services-header rv">
+      <p class="section-label">What We Do</p>
+      <h2 class="services-title">Built to Convert</h2>
+      <p class="services-sub">Three core disciplines, one singular goal: turn your audience into paying customers.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card rv rv-d1">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        </div>
+        <h3 class="service-name">Content Strategy</h3>
+        <p class="service-desc">We architect a content system tailored to your audience, platform, and business goals. No random posts — every piece of content is a strategic asset mapped to your buyer journey, from awareness to conversion.</p>
+      </div>
+
+      <div class="service-card rv rv-d2">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3 class="service-name">Marketing Strategy</h3>
+        <p class="service-desc">From brand positioning to channel mix, we design the full-funnel marketing strategy that puts your business in front of the right Tampa audience at the right moment — with messaging that actually resonates and sells.</p>
+      </div>
+
+      <div class="service-card rv rv-d3">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <h3 class="service-name">Audiovisual Production</h3>
+        <p class="service-desc">High-production video and visual content that doesn't just look good — it sells. We craft cinematic brand content, reels, ads, and campaigns built to stop the scroll and move people toward your offer.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── ECOSYSTEM ─────────────────────────────────────────── -->
+<section class="ecosystem" id="ecosystem">
+  <div class="wrap">
+    <div class="ecosystem-header rv">
+      <p class="section-label">Proof</p>
+      <h2 class="ecosystem-title">The <em>PG Ecosystem</em></h2>
+      <p class="ecosystem-sub">Every business inside the PG Ecosystem used this exact system — and found success. This isn't theory. This is a proven, repeatable framework.</p>
+    </div>
+
+    <div class="ecosystem-proof rv rv-d1">
+      <p class="ecosystem-proof-text">
+        All the businesses inside the PG Ecosystem found success using <strong>the same system</strong>. Strategic communication, purposeful content, and audiovisual production that converts — not just entertains.
+      </p>
+      <div class="ecosystem-businesses">
+        <span class="eco-tag">PG Lux Auto</span>
+        <span class="eco-tag">PG Green Homes</span>
+        <span class="eco-tag">PG Solar</span>
+        <span class="eco-tag">PG Studio</span>
+        <span class="eco-tag">+ More</span>
+      </div>
+    </div>
+
+    <div class="ecosystem-pillars">
+      <div class="pillar rv rv-d1">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h4 class="pillar-name">Targeted Messaging</h4>
+        <p class="pillar-text">Communication crafted specifically for your ideal customer — not a generic audience.</p>
+      </div>
+      <div class="pillar rv rv-d2">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h4 class="pillar-name">Revenue-First Content</h4>
+        <p class="pillar-text">Every post, video, and campaign is built with one outcome in mind: paying customers.</p>
+      </div>
+      <div class="pillar rv rv-d3">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="7" y1="7" x2="7" y2="12"/><line x1="12" y1="7" x2="12" y2="12"/><line x1="17" y1="7" x2="17" y2="12"/></svg>
+        </div>
+        <h4 class="pillar-name">Cinematic Production</h4>
+        <p class="pillar-text">Premium visuals that position your brand as the obvious choice in your market.</p>
+      </div>
+      <div class="pillar rv rv-d4">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </div>
+        <h4 class="pillar-name">Proven System</h4>
+        <p class="pillar-text">Tested and refined across the entire PG Ecosystem — not guesswork, but results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROCESS ───────────────────────────────────────────── -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="process-header rv">
+      <p class="section-label">How It Works</p>
+      <h2 class="process-title">From Content<br>to Customers</h2>
+      <p class="process-sub">A clear, three-step process designed to transform your marketing into a predictable revenue channel.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step rv rv-d1">
+        <div class="step-num">01</div>
+        <h4 class="step-name">Strategy Session</h4>
+        <p class="step-desc">We audit your current communication, understand your audience, map your buyer journey, and build a custom strategy aligned with your revenue goals.</p>
+      </div>
+      <div class="step rv rv-d2">
+        <div class="step-num">02</div>
+        <h4 class="step-name">Content Execution</h4>
+        <p class="step-desc">We produce and deploy strategic content — video, visuals, copy — across the right channels at the right frequency to build authority and drive conversions.</p>
+      </div>
+      <div class="step rv rv-d3">
+        <div class="step-num">03</div>
+        <h4 class="step-name">Optimize & Scale</h4>
+        <p class="step-desc">We track what converts, cut what doesn't, and scale the content and campaigns that consistently bring in paying customers for your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DEEP DIVE VIDEO ────────────────────────────────────── -->
+<section class="deepdive">
+  <div class="wrap">
+    <div class="deepdive-header rv">
+      <p class="section-label">Go Deeper</p>
+      <h2 class="deepdive-title">See Exactly<br>How We Do It</h2>
+      <p class="deepdive-sub">Watch how the PG Productions system turns communication into customers — for any business, in any industry.</p>
+    </div>
+    <div class="video-wrapper rv rv-d1">
+      <div class="video-frame-corner vfc-tl"></div>
+      <div class="video-frame-corner vfc-tr"></div>
+      <div class="video-frame-corner vfc-bl"></div>
+      <div class="video-frame-corner vfc-br"></div>
+      <video controls preload="metadata" poster="">
+        <source src="pgproductiions.mov" type="video/quicktime">
+        <source src="pgproductiions.mov" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BOOKING FORM ──────────────────────────────────────── -->
+<section class="booking" id="booking">
+  <div class="wrap">
+    <div class="booking-inner">
+      <div class="booking-left rv">
+        <p class="booking-eyebrow">Free Consultation</p>
+        <h2 class="booking-title">
+          Ready to Turn<br>
+          <em>Views Into Revenue?</em>
+        </h2>
+        <p class="booking-body">
+          Book your free strategy consultation with the PG Productions team. In 30 minutes, we'll identify exactly where your communication is leaking revenue — and what to do about it.
+        </p>
+        <div class="booking-points">
+          <div class="bp-item">
+            <div class="bp-dot"></div>
+            <span class="bp-text">Custom content and marketing strategy review for your business</span>
+          </div>
+          <div class="bp-item">
+            <div class="bp-dot"></div>
+            <span class="bp-text">Identify the gaps between your content and your conversions</span>
+          </div>
+          <div class="bp-item">
+            <div class="bp-dot"></div>
+            <span class="bp-text">See how the PG Ecosystem system can work for your business</span>
+          </div>
+          <div class="bp-item">
+            <div class="bp-dot"></div>
+            <span class="bp-text">100% free — no obligation, no pressure</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-right rv rv-d2">
+        <div class="booking-form">
+          <h3 class="form-title">Book Your Free Call</h3>
+          <p class="form-subtitle">We'll get back to you within 24 hours to confirm your session.</p>
+
+          <form id="consultForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="first_name" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="last_name" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@yourbusiness.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(813) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="business">Business Name</label>
+              <input type="text" id="business" name="business" placeholder="Your Business Name" />
+            </div>
+            <div class="form-group">
+              <label for="service">I Need Help With</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service...</option>
+                <option>Content Strategy</option>
+                <option>Marketing Strategy</option>
+                <option>Audiovisual Production</option>
+                <option>Full PG Ecosystem Package</option>
+                <option>Not Sure — I Need Guidance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell Us About Your Business</label>
+              <textarea id="message" name="message" placeholder="What's your biggest marketing challenge right now?"></textarea>
+            </div>
+            <button type="submit" class="btn-gold form-submit">
+              Book My Free Consultation →
+            </button>
+            <p class="form-note" style="display:flex;align-items:center;justify-content:center;gap:6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Serving entrepreneurs &amp; businesses in Tampa, Florida
+            </p>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✦</div>
+            <h3>You're In.</h3>
+            <p>Thank you for reaching out. The PG Productions team will contact you within 24 hours to schedule your free consultation call.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="pglogo.png" alt="PG Productions" />
+        <p>Communication and Marketing Strategists helping Tampa entrepreneurs convert views and likes into paying customers. Powered by the PG Ecosystem.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="#services">Content Strategy</a></li>
+          <li><a href="#services">Marketing Strategy</a></li>
+          <li><a href="#services">Audiovisual Production</a></li>
+          <li><a href="#ecosystem">The PG Ecosystem</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#booking">Book a Call</a></li>
+          <li><a href="https://pgproductions.vip" target="_blank" rel="noopener">Visit Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 PG Productions · Tampa, Florida · All rights reserved</p>
+      <div class="footer-socials">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ───────────────────────────────────────────── -->
+<script>
+/* ── Scroll scrub video — all-keyframe + lerp loop ── */
+(function () {
+  const scrubVideo   = document.getElementById('scrubVideo');
+  const scrubSection = document.getElementById('scrubSection');
+  const scrubBar     = document.getElementById('scrubBar');
+  const scrubHint    = document.getElementById('scrubHint');
+
+  if (!scrubVideo || !scrubSection) return;
+
+  let videoReady    = false;
+  let loopRunning   = false;
+  let hintHidden    = false;
+
+  // Scroll position → target (snaps instantly to scroll)
+  let targetProgress  = 0;
+  // Display position → lerps smoothly toward target
+  let displayProgress = 0;
+  // Last time we actually issued a seek (avoids redundant seeks)
+  let lastSeekTime    = -1;
+
+  // Lerp factor: how quickly display catches up to target each frame.
+  // 0.10 = silky cinematic, 0.18 = slightly tighter, 0.25 = more responsive
+  const LERP = 0.12;
+  // Min seek delta — skip seek if change < one frame at 30fps
+  const MIN_DELTA = 1 / 30;
+
+  // ── Force full preload immediately ──
+  scrubVideo.preload = 'auto';
+  scrubVideo.load();
+  scrubVideo.pause();
+  scrubVideo.addEventListener('play', () => scrubVideo.pause(), { passive: true });
+
+  scrubVideo.addEventListener('loadedmetadata', () => {
+    videoReady = true;
+    scrubVideo.pause();
+    startLoop();
+  });
+
+  // ── Read raw scroll progress (no DOM writes here) ──
+  function readScrollProgress() {
+    const rect       = scrubSection.getBoundingClientRect();
+    const scrollable = scrubSection.offsetHeight - window.innerHeight;
+    return Math.min(1, Math.max(0, -rect.top / scrollable));
+  }
+
+  // ── Seek helper: all-keyframe video so currentTime is fast,
+  //    but fastSeek() is used where available as an extra hint ──
+  function seekTo(t) {
+    if (Math.abs(t - lastSeekTime) < MIN_DELTA) return;
+    lastSeekTime = t;
+    // Clamp away from exact duration end (stalls some browsers)
+    const clamped = Math.min(t, scrubVideo.duration - 0.04);
+    if (scrubVideo.fastSeek) {
+      scrubVideo.fastSeek(clamped);
+    } else {
+      scrubVideo.currentTime = clamped;
+    }
+  }
+
+  // ── Continuous lerp loop — runs only while display ≠ target ──
+  function loop() {
+    // Lerp displayProgress toward targetProgress
+    displayProgress += (targetProgress - displayProgress) * LERP;
+
+    // Stop loop when close enough (avoids idle rAF calls)
+    const settled = Math.abs(targetProgress - displayProgress) < 0.0003;
+    if (settled) displayProgress = targetProgress;
+
+    // Progress bar
+    scrubBar.style.width = (displayProgress * 100).toFixed(3) + '%';
+
+    // Hint fade
+    if (!hintHidden && displayProgress > 0.025) {
+      scrubHint.style.opacity = '0';
+      hintHidden = true;
+    }
+
+    // Seek video frame
+    if (videoReady) seekTo(displayProgress * scrubVideo.duration);
+
+    if (settled) {
+      loopRunning = false;
+    } else {
+      requestAnimationFrame(loop);
+    }
+  }
+
+  function startLoop() {
+    if (!loopRunning) {
+      loopRunning = true;
+      requestAnimationFrame(loop);
+    }
+  }
+
+  // ── Scroll: update target immediately, kick off lerp loop ──
+  window.addEventListener('scroll', () => {
+    targetProgress = readScrollProgress();
+    startLoop();
+  }, { passive: true });
+
+  // Initial paint
+  startLoop();
+})();
+
+/* ── Nav scroll ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── Mobile menu ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+function closeMobile() { mobileMenu.classList.remove('open'); }
+
+/* ── Scroll reveal ── */
+const rvEls = document.querySelectorAll('.rv');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); } });
+}, { threshold: 0.12 });
+rvEls.forEach(el => observer.observe(el));
+
+/* ── Form submit ── */
+const form = document.getElementById('consultForm');
+const success = document.getElementById('formSuccess');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // Basic validation
+  const fname = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  if (!fname || !email) {
+    alert('Please fill in your name and email address.');
+    return;
+  }
+  // Simulate submit success
+  form.style.display = 'none';
+  success.classList.add('show');
+  // Scroll to success
+  success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+/* ── Smooth scroll for nav links ── */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
